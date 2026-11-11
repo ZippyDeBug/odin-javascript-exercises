@@ -1,7 +1,7 @@
 const sumAll = function(...nums) {
     nums.sort((a, b) => a - b);
     let intArray = [];
-    if (nums.every((x) => typeof x === "number" && Number.isInteger(x) && x >= 0 )) {
+    if (nums.every((x) => Number.isInteger(x) && x >= 0 )) {
          for ( let i = nums[0]; i <= nums.at(-1); i++) {
         intArray.push(i)
         }
