@@ -1,13 +1,14 @@
 const sumAll = function(...nums) {
+    if (!nums.every((x) => Number.isInteger(x) && x >= 0 )) {
+        return "ERROR"}       
     nums.sort((a, b) => a - b);
-    let intArray = [];
-    if (nums.every((x) => Number.isInteger(x) && x >= 0 )) {
-         for ( let i = nums[0]; i <= nums.at(-1); i++) {
-        intArray.push(i)
+    const min = nums.at(0)
+    const max = nums.at(-1)
+    let sum = 0;
+    for (let i = min; i <= max; i++) {
+        sum += i;
         }
-        return intArray.reduce((acc,curr)=> acc + curr)
-    }       
-    else {return "ERROR"}
+        return sum
 }
 
 // Do not edit below this line
