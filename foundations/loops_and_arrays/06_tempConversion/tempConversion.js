@@ -6,7 +6,7 @@ function roundedToFixed(input, digits){
 }
 
 const convertToCelsius = function(oF) {
-  let celc = ((oF - 32) * 1.8);
+  let celc = ((oF - 32) / 1.8);
     return parseFloat(roundedToFixed(celc, 1))
 };
 
